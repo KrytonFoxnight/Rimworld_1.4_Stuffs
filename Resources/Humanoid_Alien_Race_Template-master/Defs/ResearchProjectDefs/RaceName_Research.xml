@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- ==================== RaceName Mod - Research  ========================= -->
+
+	<ResearchProjectDef>
+		<tab>RaceName_RTab</tab>
+		<defName>RaceName_Reseach_ProjectA</defName>
+		<label>Project A</label>
+		<description>RaceName Reseach Project A</description>
+		<baseCost>500</baseCost>
+		<prerequisites>
+			<!-- <li>BasicRaceNameConstruction</li> -->
+		</prerequisites>
+		<techLevel>Industrial</techLevel>
+		<!--<requiredResearchBuilding>ResearchBench</requiredResearchBuilding>-->
+		<!-- <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding> -->
+		<researchViewX>0</researchViewX>
+		<researchViewY>0.0</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<tab>RaceName_RTab</tab>
+		<defName>RaceName_Reseach_ProjectB</defName>
+		<label>Project B</label>
+		<description>RaceName Reseach Project B</description>
+		<baseCost>1000</baseCost>
+		<prerequisites>
+			<li>RaceName_Reseach_ProjectA</li>
+		</prerequisites>
+		<techLevel>Industrial</techLevel>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>0.75</researchViewX>
+		<researchViewY>0</researchViewY>
+	</ResearchProjectDef>	
+	
+	<ResearchProjectDef>
+		<tab>RaceName_RTab</tab>
+		<defName>RaceName_Reseach_ProjectC</defName>
+		<label>Project C</label>
+		<description>RaceName Reseach Project C</description>
+		<baseCost>1000</baseCost>
+		<prerequisites>
+			<li>RaceName_Reseach_ProjectA</li>
+		</prerequisites>
+		<techLevel>Industrial</techLevel>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<researchViewX>0</researchViewX>
+		<researchViewY>0.5</researchViewY>
+	</ResearchProjectDef>
+	
+</Defs>

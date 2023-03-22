@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HediffDef ParentName="DiseaseBase">
+    <defName>FoxTailMutation</defName>
+    <label>Fox Tail Mutation</label>
+    <description>Fox Tail Mutation</description>
+    <isBad>false</isBad>
+  </HediffDef>
+  
+  <HediffDef ParentName="DiseaseBase">
+    <defName>MonkeyTailMutation</defName>
+    <label>Monkey Tail Mutation</label>
+    <description>Monkey Tail Mutation</description>
+    <isBad>false</isBad>
+  </HediffDef>
+  
+  <HediffDef ParentName="DiseaseBase">
+    <defName>RatTailMutation</defName>
+    <label>Rat Tail Mutation</label>
+    <description>Rat Tail Mutation</description>
+    <isBad>false</isBad>
+  </HediffDef>
+
+  <HediffDef ParentName="DiseaseBase">
+    <defName>IbexMHornMutation</defName>
+    <label>Male Ibex Horn Mutation</label>
+    <description>Male Ibex Horn Mutation</description>
+    <isBad>false</isBad>
+  </HediffDef>
+  
+  <HediffDef ParentName="DiseaseBase">
+    <defName>IbexFHornMutation</defName>
+    <label>Female Ibex Horn  Mutation</label>
+    <description>Female Ibex Horn  Mutation</description>
+    <isBad>false</isBad>
+  </HediffDef>
+  
+  <HediffDef ParentName="DiseaseBase">
+    <defName>GazelleHornMutation</defName>
+    <label>Gazelle Horn Mutation</label>
+    <description>Gazelle Horn Mutation</description>
+    <isBad>false</isBad>
+  </HediffDef>
+</Defs>

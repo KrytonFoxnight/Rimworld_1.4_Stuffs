@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FactionDef Abstract="True" Name="RaceNameFactionBase">
+    <colorSpectrum>
+      <li>(0, 0.737, 0.847)</li>
+    </colorSpectrum>
+  </FactionDef>
+  
+  <FactionDef Parent="RaceNameFactionBase">
+    <defName>RaceNamePlayerColony</defName>
+    <label>RaceName Colony</label>
+    <description>Your own RaceName Colony.</description>
+    <isPlayer>true</isPlayer>
+    <basicMemberKind>RaceNamePlayerColonist</basicMemberKind>
+    <pawnsPlural>colonists</pawnsPlural>
+    <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+	<playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+	<factionNameMaker>NamerFactionOutlander</factionNameMaker>
+    <techLevel>Ultra</techLevel>
+	<backstoryFilters>
+	  <li>
+		<categories>
+		<li>Pirate</li>
+		<li>Offworlder</li>
+		<li>Outlander</li>
+		</categories>
+	  </li>
+	</backstoryFilters>
+	<factionIconPath>World/WorldObjects/Expanding/PirateOutpost</factionIconPath>
+    <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+	<!--
+    <settlementTexturePath>World/WorldObjects/TribalSettlement</settlementTexturePath>
+	-->
+    <startingResearchTags>
+      <li>ClassicStart</li>
+    </startingResearchTags>
+    <hairTags>
+		<li>Urban</li>
+    </hairTags>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>Synthread</li>
+      </thingDefs>
+    </apparelStuffFilter>
+  </FactionDef>
+  
+    <FactionDef Parent="RaceNameFactionBase">
+    <defName>RaceNamePlayerColonyTribal</defName>
+    <label>RaceName Tribal-like</label>
+    <description>RaceName semi-tribal start. (No research done, but high tech level)</description>
+    <isPlayer>true</isPlayer>
+    <basicMemberKind>RaceNamePlayerTribal</basicMemberKind>
+    <pawnsPlural>colonists</pawnsPlural>
+    <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+	<factionNameMaker>NamerFactionTribal</factionNameMaker>
+    <settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+    <techLevel>Ultra</techLevel>
+	<backstoryFilters>
+	  <li>
+		<categories>
+		<li>Tribal</li>
+		</categories>
+	  </li>
+	</backstoryFilters>
+    <backstoryCategories>
+		<li>Tribal</li>
+  	</backstoryCategories>
+	<factionIconPath>World/WorldObjects/Expanding/PirateOutpost</factionIconPath>
+    <settlementTexturePath>World/WorldObjects/TribalSettlement</settlementTexturePath>
+	<!--
+    <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+	-->
+    <startingResearchTags>
+      <li>TribalStart</li>
+    </startingResearchTags>
+    <hairTags>
+      <li>Tribal</li>
+    </hairTags>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>Cloth</li>
+      </thingDefs>
+    </apparelStuffFilter>
+    <colorSpectrum>
+      <li>(0, 0.437, 0.847)</li>
+    </colorSpectrum>
+  </FactionDef>
+
+</Defs>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- ============================ RaceName Base ========================== -->
+
+  <PawnKindDef Abstract="True" Name="RaceName_Player_KindBase">
+    <race>Alien_RaceName</race>
+    <combatPower>40</combatPower>
+    <baseRecruitDifficulty>0.50</baseRecruitDifficulty>
+    <isFighter>false</isFighter>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <forceNormalGearQuality>true</forceNormalGearQuality>
+	<modExtensions>
+	  <li Class="AlienRace.Info">
+		<allowHumanBios>true</allowHumanBios>
+		<maleGenderProbability>0.5</maleGenderProbability>
+	  </li>
+	</modExtensions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="RaceName_Player_KindBase">
+    <defName>RaceNamePlayerColonist</defName>
+    <label>colonist</label>
+    <defaultFactionType>RaceNamePlayerColony</defaultFactionType>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+			<li>Outlander</li>
+			<li>Offworlder</li>
+			<li>Pirate</li>
+			<li>ImperialFighter</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <apparelTags>
+      <li>Spacer</li>
+      <li>IndustrialBasic</li>
+    </apparelTags>
+    <apparelMoney>
+      <min>1000</min>
+      <max>2400</max>
+    </apparelMoney>
+    <backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="RaceName_Player_KindBase">
+    <defName>RaceNamePlayerTribal</defName>
+    <label>colonist</label>
+    <defaultFactionType>RaceNamePlayerColonyTribal</defaultFactionType>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+			<li>Tribal</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <apparelTags>
+      <li>Neolithic</li>
+      <li>IndustrialBasic</li>
+    </apparelTags>
+    <apparelMoney>
+      <min>1000</min>
+      <max>2400</max>
+    </apparelMoney>
+    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+  </PawnKindDef>
+
+</Defs>

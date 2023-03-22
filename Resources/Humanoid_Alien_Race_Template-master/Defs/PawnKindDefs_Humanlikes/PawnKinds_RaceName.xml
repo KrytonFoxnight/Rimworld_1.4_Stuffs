@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- ============================ RaceName Base ========================== -->
+
+  <PawnKindDef Name="RaceName_KindBase" Abstract="True">
+    <defaultFactionType>RaceNameFaction</defaultFactionType>
+    <race>Alien_RaceName</race>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+			<li>Outlander</li>
+			<li>Offworlder</li>
+			<li>Pirate</li>
+			<li>ImperialFighter</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <chemicalAddictionChance>0.005</chemicalAddictionChance>
+    <baseRecruitDifficulty>0.60</baseRecruitDifficulty>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <apparelTags>
+      <li>Outlander</li>
+      <li>IndustrialBasic</li>
+    </apparelTags>
+	 <weaponTags>
+	  <li>Gun</li>
+    </weaponTags>
+	<modExtensions>
+	  <li Class="AlienRace.Info">
+		<allowHumanBios>false</allowHumanBios>
+		<maleGenderProbability>0.5</maleGenderProbability>
+	  </li>
+	</modExtensions>
+  </PawnKindDef>
+  
+  <!-- ============================ RaceName Civilian Base ========================== -->
+
+  <PawnKindDef Name="RaceName_CivBase" ParentName="RaceName_KindBase" Abstract="True">
+    <combatPower>25</combatPower>
+	<race>Alien_RaceName</race>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>
+      <min>0.2</min>
+      <max>2.0</max>
+    </gearHealthRange>
+    <apparelMoney>
+      <min>300</min>
+      <max>900</max>
+    </apparelMoney>
+    <weaponMoney>
+      <min>1400</min>
+      <max>2500</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>Gun</li>
+      <li>NonNeolithicOnlyMelee</li>
+    </weaponTags>
+    <techHediffsMoney>
+      <min>200</min>
+      <max>300</max>
+    </techHediffsMoney>
+    <techHediffsTags>
+      <li>Simple</li>
+    </techHediffsTags>
+    <techHediffsChance>0.51</techHediffsChance>
+    <invNutrition>2.55</invNutrition>
+    <inventoryOptions>
+      <skipChance>0.75</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <choiceChance>90</choiceChance>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>25</min>
+            <max>70</max>
+          </countRange>
+        </li>
+        <li>
+          <choiceChance>10</choiceChance>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>700</min>
+            <max>1000</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+  
+  <!-- ============================ RaceName Civilians ========================== -->
+  
+  <PawnKindDef ParentName="RaceName_CivBase">
+    <defName>RaceName_Colonist</defName>
+    <label>colonist</label>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="RaceName_CivBase">
+    <defName>RaceName_Leader</defName>
+    <label>leader</label>
+    <labelPlural>leaders</labelPlural>
+    <factionLeader>true</factionLeader>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+			<li>Outlander</li>
+			<li>Offworlder</li>
+			<li>Pirate</li>
+			<li>ImperialFighter</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+	<minGenerationAge>39</minGenerationAge>
+	<maxGenerationAge>80</maxGenerationAge>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="RaceName_CivBase">
+    <defName>RaceName_Trader</defName>
+    <label>colony trader</label>
+    <trader>true</trader>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="RaceName_CivBase">
+    <defName>RaceNameSlave</defName>
+    <label>slave</label>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="RaceName_CivBase">
+    <defName>RaceNameRefugee</defName>
+    <label>refugee</label>
+  </PawnKindDef>
+
+ 
+  <!-- ============================ RaceName Military Base ========================== -->
+  <PawnKindDef Name="RaceName_MilBase" ParentName="RaceName_KindBase" Abstract="True">
+    <chemicalAddictionChance>0</chemicalAddictionChance>
+    <isFighter>true</isFighter>
+	<race>Alien_RaceName</race>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+			<li>Outlander</li>
+			<li>Offworlder</li>
+			<li>Pirate</li>
+			<li>ImperialFighter</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <invNutrition>2.55</invNutrition>
+    <itemQuality>Normal</itemQuality>
+	<minGenerationAge>19</minGenerationAge>
+    <maxGenerationAge>250</maxGenerationAge>
+    <gearHealthRange>
+      <min>0.7</min>
+      <max>2.3</max>
+    </gearHealthRange>
+    <apparelTags>
+      <li>Outlander</li>
+      <li>Military</li>
+    </apparelTags>
+    <apparelMoney>
+      <min>1500</min>
+      <max>5800</max>
+    </apparelMoney>
+    <weaponMoney>
+      <min>1400</min>
+      <max>20000</max>
+    </weaponMoney>
+    <weaponTags>
+	  <li>EliteGun</li>
+    <li>SniperRifle</li>
+	  <li>AdvancedGun</li>
+    </weaponTags>
+    <techHediffsMoney>
+      <min>1000</min>
+      <max>15000</max>
+    </techHediffsMoney>
+    <inventoryOptions>
+      <skipChance>0.8</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>50</min>
+            <max>200</max>
+          </countRange>
+        </li>
+        <li>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>1</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+  
+  <!-- ============================ RaceName Military ========================== -->
+  <PawnKindDef ParentName="RaceName_MilBase">
+    <defName>RaceName_Soldier</defName>
+    <label>soldier</label>
+    <combatPower>90</combatPower>
+    <minGenerationAge>19</minGenerationAge>
+    <gearHealthRange>
+      <min>0.7</min>
+      <max>2.3</max>
+    </gearHealthRange>
+    <apparelTags>
+      <li>Outlander</li>
+      <li>Military</li>
+	  <!--
+      <li>IndustrialAdvanced</li>
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+      <li>SpacerMilitary</li>
+	  -->
+    </apparelTags>
+    <apparelMoney>
+      <min>1500</min>
+      <max>25000</max>
+    </apparelMoney>
+    <weaponMoney>
+      <min>1400</min>
+      <max>28000</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>SniperRifle</li>
+	  <li>AdvancedGun</li>
+    </weaponTags>
+    <techHediffsMoney>
+      <min>1000</min>
+      <max>15000</max>
+    </techHediffsMoney>
+    <combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>2</max>
+    </combatEnhancingDrugsCount>
+    <techHediffsTags>
+      <li>Advanced</li>
+    </techHediffsTags>
+    <techHediffsChance>0.73</techHediffsChance>
+    <inventoryOptions>
+      <skipChance>0.8</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>50</min>
+            <max>200</max>
+          </countRange>
+        </li>
+        <li>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>1</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+</Defs>

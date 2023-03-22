@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+<HairDef>
+    <label>Bald</label>
+    <hairGender>Male</hairGender>
+    <texPath>Things/Pawn/Humanlike/Hairs/HairBlank</texPath>
+    <defName>Bald</defName>
+		<hairTags>
+			<li>NoHair</li>
+		</hairTags>
+  </HairDef>
+  
+</Defs>
